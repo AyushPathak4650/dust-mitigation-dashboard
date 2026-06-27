@@ -1,10 +1,12 @@
 # AeroDust-Shield Dashboard
 
-[![CI/CD Pipeline](https://github.com/cecb-cg/aerodust-shield/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/cecb-cg/aerodust-shield/actions/workflows/ci-cd.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue.svg)](tsconfig.json)
-[![React](https://img.shields.io/badge/React-18.x-blue.svg)](package.json)
-[![Docker](https://img.shields.io/badge/Docker-Ready-success.svg)](Dockerfile)
+<p align="center">
+  <a href="https://github.com/AyushPathak4650/dust-mitigation-dashboard/actions"><img src="https://github.com/AyushPathak4650/dust-mitigation-dashboard/actions/workflows/ci-cd.yml/badge.svg?branch=main" alt="CI/CD" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  <a href="tsconfig.json"><img src="https://img.shields.io/badge/TypeScript-Strict-blue.svg" alt="TypeScript" /></a>
+  <a href="package.json"><img src="https://img.shields.io/badge/React-18.x-blue.svg" alt="React" /></a>
+  <a href="Dockerfile"><img src="https://img.shields.io/badge/Docker-Ready-success.svg" alt="Docker" /></a>
+</p>
 
 A production-grade, highly performant, secure, and accessible executive dashboard built for the **Chhattisgarh Environment Conservation Board (CECB)** and **Ministry of Road Transport and Highways (MoRTH)**. It visualizes the adoption, physics simulation, and financial return (ROI) of the **AeroDust-Shield**—a retrofittable aerodynamic and triboelectric dust-mitigation system designed for heavy commercial vehicles (dumpers/tippers) operating in Indian mining and industrial belts.
 
