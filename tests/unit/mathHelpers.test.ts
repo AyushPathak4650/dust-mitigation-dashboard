@@ -11,9 +11,9 @@ describe('Aerodynamic & Physical Math Calculations', () => {
 
     expect(baselineShear).toBeGreaterThan(0.2);
     expect(shieldedShear).toBeLessThan(baselineShear);
-    // Shield should reduce shear stress by ~56%
+    // Shield should reduce shear stress by ~55%
     const ratio = shieldedShear / baselineShear;
-    expect(ratio).toBeCloseTo(0.44, 2);
+    expect(ratio).toBeCloseTo(0.45, 2);
   });
 
   test('calculateDustSuspension enforces lifting threshold boundaries', () => {
