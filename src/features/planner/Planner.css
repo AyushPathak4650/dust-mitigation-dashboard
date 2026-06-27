@@ -1,0 +1,104 @@
+/* Planner layout CSS styles */
+.planner-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  height: calc(100vh - 190px);
+  min-height: 500px;
+}
+
+.planner-inputs {
+  height: 100%;
+}
+
+.planner-outputs {
+  height: 100%;
+}
+
+.outputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.output-card {
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--card-border);
+}
+
+.card-blue { background-color: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.15); }
+.card-green { background-color: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.15); }
+.card-cyan { background-color: rgba(0, 242, 254, 0.05); border-color: rgba(0, 242, 254, 0.15); }
+.card-yellow { background-color: rgba(245, 158, 11, 0.05); border-color: rgba(245, 158, 11, 0.15); }
+
+.output-card .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.output-card .value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.output-card .sub {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.social-impact-calculator-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.social-impact-calculator-card h5 {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.social-impact-calculator-card .description {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.health-savings-row {
+  display: flex;
+}
+
+.health-metric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.health-metric.border-left {
+  border-left: 1px solid var(--card-border);
+  padding-left: 20px;
+}
+
+.health-metric .label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.health-metric .value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}

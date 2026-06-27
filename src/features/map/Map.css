@@ -1,0 +1,202 @@
+/* GIS Map layout styles */
+.map-view-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  height: calc(100vh - 190px);
+  min-height: 500px;
+}
+
+.map-sidebar {
+  height: 100%;
+}
+
+.height-full {
+  height: 100%;
+}
+
+.no-border {
+  border: none;
+}
+
+.metric-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.metric-row .label {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metric-row .label i {
+  width: 16px;
+  color: var(--text-tertiary);
+}
+
+.metric-row .value {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metric-row .unit {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.district-forecast-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.district-forecast-card h5 {
+  font-family: var(--font-display);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.forecast-row {
+  display: flex;
+}
+
+.forecast-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.forecast-box.border-left {
+  border-left: 1px solid var(--card-border);
+  padding-left: 16px;
+}
+
+.forecast-box .label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.forecast-box .value {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.map-render-area {
+  height: 100%;
+  position: relative;
+}
+
+.map-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #0b1120;
+}
+
+.map-legend-floating {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.map-legend-floating strong {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.legend-color-ramp {
+  height: 8px;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 4px;
+  width: 160px;
+}
+
+.ramp-color {
+  flex: 1;
+}
+
+.bg-legend-good { background-color: var(--color-green); }
+.bg-legend-mod { background-color: var(--color-yellow); }
+.bg-legend-poor { background-color: #ea580c; }
+.bg-legend-vpoor { background-color: var(--color-red); }
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.svg-map-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* SVG Path Styling for GIS map */
+.district-path {
+  fill: #1e293b;
+  stroke: #0a0f1d;
+  stroke-width: 1.5;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.district-path:hover {
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.5));
+  z-index: 10;
+}
+
+.district-path.selected {
+  stroke: var(--color-accent);
+  stroke-width: 3;
+}
+
+.district-path.level-good { fill: rgba(16, 185, 129, 0.25); }
+.district-path.level-good:hover { fill: rgba(16, 185, 129, 0.4); }
+
+.district-path.level-mod { fill: rgba(245, 158, 11, 0.25); }
+.district-path.level-mod:hover { fill: rgba(245, 158, 11, 0.4); }
+
+.district-path.level-poor { fill: rgba(234, 88, 12, 0.25); }
+.district-path.level-poor:hover { fill: rgba(234, 88, 12, 0.4); }
+
+.district-path.level-vpoor { fill: rgba(239, 68, 68, 0.25); }
+.district-path.level-vpoor:hover { fill: rgba(239, 68, 68, 0.4); }
