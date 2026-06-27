@@ -1,4 +1,3 @@
-import React from 'react';
 import { RoiInput, RoiOutput } from '../../types';
 import { HOTSPOT_DATA, TIMELINE_DATA } from '../../constants';
 import { formatCurrency, formatCurrencyCr } from '../../utils/mathHelpers';
@@ -78,7 +77,7 @@ export default function OverviewDashboard({ inputs, outputs }: DashboardProps) {
                   <span className="status">Moderately Poor</span>
                 </div>
                 <div className="aqi-metric-box border-left">
-                  <span class="label">Target AQI (Post-Rollout)</span>
+                  <span className="label">Target AQI (Post-Rollout)</span>
                   <span className="value text-success">115</span>
                   <span className="status">Satisfactory</span>
                 </div>
@@ -126,7 +125,7 @@ export default function OverviewDashboard({ inputs, outputs }: DashboardProps) {
                 </div>
                 <div className="chart-legend">
                   <span className="legend-item"><span className="legend-color color-before"></span> Before AeroDust-Shield</span>
-                  <span className="legend-item"><span class="legend-color color-after"></span> After AeroDust-Shield</span>
+                  <span className="legend-item"><span className="legend-color color-after"></span> After AeroDust-Shield</span>
                 </div>
               </div>
             </div>
@@ -181,7 +180,7 @@ export default function OverviewDashboard({ inputs, outputs }: DashboardProps) {
                   </div>
                 </div>
                 <div className="info-item">
-                  <span class="color-dot bg-cyan"></span>
+                  <span className="color-dot bg-cyan"></span>
                   <div>
                     <strong>UCD Rear Diffuser:</strong> Converts kinetic energy to pressure, reducing road shear.
                   </div>

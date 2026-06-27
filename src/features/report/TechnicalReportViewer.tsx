@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { compileMarkdownToHtml } from '../../lib/markdownParser';
-import { DISTRICT_DATA } from '../../constants';
 import './Report.css';
 
 // We import the markdown content string from the compiled source or declare it inline.

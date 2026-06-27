@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DISTRICT_DATA, DISTRICT_MAP_PATHS } from '../../constants';
 import './Map.css';
 
@@ -84,7 +84,7 @@ export default function DistrictGisMap() {
             <div className="legend-color-ramp">
               <span className="ramp-color bg-legend-good"></span>
               <span className="ramp-color bg-legend-mod"></span>
-              <span class="ramp-color bg-legend-poor"></span>
+              <span className="ramp-color bg-legend-poor"></span>
               <span className="ramp-color bg-legend-vpoor"></span>
             </div>
             <div className="legend-labels">

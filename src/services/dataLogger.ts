@@ -2,8 +2,18 @@
  * Secure Logging Service
  * Prevents stack trace leakages and screens out sensitive credentials or API keys.
  */
+interface ImportMetaEnv {
+  readonly VITE_APP_ENV?: string;
+  readonly VITE_CECB_API_URL?: string;
+  readonly VITE_ENABLE_MOCK_DEMO_DATA?: string;
+}
+
+interface ImportMetaWithEnv {
+  readonly env: ImportMetaEnv;
+}
+
 class DataLogger {
-  private isProduction = import.meta.env.VITE_APP_ENV === 'production';
+  private isProduction = ((import.meta as unknown) as ImportMetaWithEnv).env.VITE_APP_ENV === 'production';
 
   log(message: string, context?: Record<string, unknown>) {
     if (this.isProduction) {
@@ -61,8 +71,8 @@ class DataLogger {
   private sendToTelemetry(level: string, message: string, payload: Record<string, unknown>) {
     // Mock telemetry send: POST /telemetry
     // In production, this pushes to safe centralized logging server
-    const endpoint = import.meta.env.VITE_CECB_API_URL;
-    if (endpoint && !import.meta.env.VITE_ENABLE_MOCK_DEMO_DATA) {
+    const endpoint = ((import.meta as unknown) as ImportMetaWithEnv).env.VITE_CECB_API_URL;
+    if (endpoint && !((import.meta as unknown) as ImportMetaWithEnv).env.VITE_ENABLE_MOCK_DEMO_DATA) {
       fetch(`${endpoint}/telemetry`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

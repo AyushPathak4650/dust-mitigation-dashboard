@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import OverviewDashboard from './features/dashboard/OverviewDashboard';
 import DistrictGisMap from './features/map/DistrictGisMap';
 import AeroSimulator from './features/simulator/AeroSimulator';
@@ -148,4 +148,3 @@ export default function App() {
     </div>
   );
 }
-export default App;

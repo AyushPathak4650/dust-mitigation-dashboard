@@ -1,4 +1,3 @@
-import React from 'react';
 import { RoiInput, RoiOutput } from '../../types';
 import './Planner.css';
 
